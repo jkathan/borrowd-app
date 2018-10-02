@@ -39,7 +39,7 @@ addContactHandler(event) {
         returnDate: returnDate
       };
       //this can be done better. talk to jacob about how
-      contacts.push(card);
+      cards.push(card);
       console.log("cards: ", cards);
       this.setState({
         cards:cards
