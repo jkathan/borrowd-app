@@ -5,5 +5,5 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import LoanItemBoard from './components/Loaned/loan-item-list'
 
-ReactDOM.render(<LoanItemList />, document.getElementById('root'));
+ReactDOM.render(<LoanItemBoard />, document.getElementById('root'));
 registerServiceWorker();
