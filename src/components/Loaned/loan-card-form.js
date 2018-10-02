@@ -14,7 +14,7 @@ export default class AddLoanForm extends React.Component {
             email: "",
             phone: "",
             returnDate: ''
-        }
+        };
     }
 
     setEditing(editing) {
@@ -48,8 +48,7 @@ render() {
 
         return (
             <form
-                onSubmit={this.onSubmit}
-                )}> 
+                onSubmit={this.onSubmit}> 
                 <input name="loanee" type="text" label="Loanee:" value={this.state.loanee} onChange= {this.handleUpdate}//validate={[required, nonEmpty]} 
                 />
                 <input name="email" type="email" label="Email address:" value={this.state.email} onChange= {this.handleUpdate}//validate={[required, nonEmpty, email]}
