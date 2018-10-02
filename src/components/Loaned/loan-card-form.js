@@ -31,7 +31,7 @@ class AddLoanForm extends React.Component {
 
     handleUpdate(event) {
         event.preventDefault();
-        this.setState({[e.currentTarget.name]: e.currentTarget.value});
+        this.setState({[event.currentTarget.name]: event.currentTarget.value});
     }
        
 //add checks for email and date
