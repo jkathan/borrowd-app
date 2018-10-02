@@ -13,12 +13,12 @@ export default function LoanCard(props) {
 		);
 	};
 
-LoanCard.defaultProps = {
-    loanee: '',
-    email: '',
-    phone: '',
-    returnDate: ''
-};
+//LoanCard.defaultProps = {
+   // loanee: '',
+  //  email: '',
+  //  phone: '',
+  //  returnDate: ''
+//};
 
 //<button onClick={() => props.removeCard(props.id)}>Return</button>
 //<button onClick={() => }>Renew</button>

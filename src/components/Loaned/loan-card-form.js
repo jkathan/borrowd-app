@@ -5,7 +5,7 @@ import React from 'react';
 
 
 //this needs the api to make a static app
-class AddLoanForm extends React.Component {
+export default class AddLoanForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -48,8 +48,7 @@ render() {
 
         return (
             <form
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
+                onSubmit={this.onSubmit}
                 )}> 
                 <input name="loanee" type="text" label="Loanee:" value={this.state.loanee} onChange= {this.handleUpdate}//validate={[required, nonEmpty]} 
                 />
@@ -62,6 +61,7 @@ render() {
                 />
                 <button
                     type="submit"
+                    onClick={() => this.setEditing(false)}
                     disabled={this.props.pristine || this.props.submitting}>
                     Submit
                 </button>
