@@ -1,4 +1,4 @@
-
+/*
 class FormButtons extends React.Component {
   constructor(props) {
         super(props);
@@ -52,3 +52,4 @@ class FormButtons extends React.Component {
         );
     }
 }
+*/

@@ -1,4 +1,4 @@
-export default class Board extends React.Component {
+/*export default class Board extends React.Component {
     constructor(props) {
         super(props);
 
@@ -32,7 +32,7 @@ export default class Board extends React.Component {
                     <option>Nearest to Overdue</option>
                     <option>Newest</option>
                 </select>
-                <
+                
                 <h2>{this.props.title}</h2>
                 <ul className="lists">
                     <li className="add-list-wrapper">
@@ -52,3 +52,4 @@ export default class Board extends React.Component {
 Board.defaultProps = {
     title: 'Board'
 };
+*/

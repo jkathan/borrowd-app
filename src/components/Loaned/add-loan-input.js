@@ -1,4 +1,4 @@
-class AddLoanInput extends React.Component {
+/*class AddLoanInput extends React.Component {
     componentDidUpdate(prevProps) {
         if (!prevProps.meta.active && this.props.meta.active) {
             this.input.focus();
@@ -36,3 +36,4 @@ class AddLoanInput extends React.Component {
         );
     }
 }
+*?

@@ -1,4 +1,4 @@
-class FormButtonFromList extends React.Component {
+/*class FormButtonFromList extends React.Component {
 	//will need ajax call to populate select
 	constructor(props) {
         super(props);
@@ -39,3 +39,4 @@ class FormButtonFromList extends React.Component {
             </form>
         );
     }
+    */

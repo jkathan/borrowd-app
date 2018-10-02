@@ -1,7 +1,7 @@
 import React from 'react';
-import {reduxForm, Field, SubmissionError, focus} from 'redux-form';
-import Input from './input';
-import {required, nonEmpty, email} from '../validators';
+//import {reduxForm, Field, SubmissionError, focus} from 'redux-form';
+//import Input from './input';
+//import {required, nonEmpty, email} from '../validators';
 
 
 //this needs the api to make a static app
@@ -10,26 +10,28 @@ class AddLoanForm extends React.Component {
         super(props);
         this.state = {
             editing: false,
-            loanee: '',
-            email: '',
-            phone: '',
+            loanee: "",
+            email: "",
+            phone: "",
             returnDate: ''
-        };
+        }
     }
+
     setEditing(editing) {
         this.setState({
             editing
         });
     }
-    onSubmit(event) {
-         event.preventDefault();
-         const target = event.target;
-         const name = target.name;
-         const value = target.value;
 
-         this.setState({
-            [name]: value
-         })
+    onSubmit(event) {
+        event.preventDefault();
+        this.props.onAdd(this.state)
+        this.setState({loanee: "", email: "", phone: "", returnDate: ''});
+    }
+
+    handleUpdate(event) {
+        event.preventDefault();
+        this.setState({[e.currentTarget.name]: e.currentTarget.value});
     }
        
 //add checks for email and date
@@ -49,13 +51,13 @@ render() {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}> 
-                <input name="loanee" type="text" label="Loanee:" value={this.state.value} //validate={[required, nonEmpty]} 
+                <input name="loanee" type="text" label="Loanee:" value={this.state.loanee} onChange= {this.handleUpdate}//validate={[required, nonEmpty]} 
                 />
-                <input name="email" type="email" label="Email address:" value={this.state.value} //validate={[required, nonEmpty, email]}
+                <input name="email" type="email" label="Email address:" value={this.state.email} onChange= {this.handleUpdate}//validate={[required, nonEmpty, email]}
                 />
-                <input name="phone" type="tel" label="Phone #:" value={this.state.value}//validate={[required, nonEmpty]} 
+                <input name="phone" type="tel" label="Phone #:" value={this.state.phone} onChange= {this.handleUpdate}//validate={[required, nonEmpty]} 
                 />
-                <input name="return" type="date" label="Date of Return:" value={this.state.value}
+                <input name="returnDate" type="date" label="Date of Return:" value={this.state.returnDate} onChange= {this.handleUpdate}
                     //validate={[required, nonEmpty]}
                 />
                 <button

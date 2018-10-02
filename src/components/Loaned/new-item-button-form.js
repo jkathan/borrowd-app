@@ -1,5 +1,4 @@
-class FormButtonNewForm extends React.Component {
-	onSubmit(values) {
+/*	/*onSubmit(values) {
         return fetch('/api/messages', {
             method: 'POST',
             body: JSON.stringify(values),
@@ -86,4 +85,4 @@ render() {
             </form>
         );
     }
-}
+}*/

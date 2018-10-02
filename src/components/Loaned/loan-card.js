@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LoanCard(props) {
+class LoanCard extends React.Component {
 
 		return (
 	        <div className="card">
@@ -8,8 +8,15 @@ export default function LoanCard(props) {
 	            {props.email}
 	            {props.phone}
 	            {props.returnDate}
-	            <button onClick={() => props.removeCard(props.id)}>Return</button>
-	            <button onClick={() => }>Renew</button>
+	            //<button onClick={() => props.removeCard(props.id)}>Return</button>
+	            //<button onClick={() => }>Renew</button>
 	        </div>
 		}
 	}
+
+Card.defaultProps = {
+    loanee: '',
+    email: '',
+    phone: '',
+    returnDate: ''
+};

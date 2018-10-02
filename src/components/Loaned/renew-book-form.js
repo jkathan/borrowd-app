@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 
 import './add-form.css';
 
@@ -11,15 +11,16 @@ export default class RenewBookForm extends React.Component {
 
         this.onSubmit = this.onSubmit.bind(this);
     }
-
+//not sure how to build static app without api
     onSubmit(event) {
         event.preventDefault();
         //edit to api, 
-        const text = this.textInput.value.trim();
-        if (text && this.props.onAdd) {
-            this.props.onAdd(this.textInput.value);
+        const date = this.dateInput.value();
+        if (date && this.props.onAdd) {
+            this.props.onAdd(this.dateInput.value);
         }
-        this.textInput.value = '';
+        //reorder date here
+        this.dateInput.value = '';
     }
 
     setEditing(editing) {
@@ -40,7 +41,7 @@ export default class RenewBookForm extends React.Component {
 
         return (
             <form className="card add-form" onSubmit={this.onSubmit}>
-                <input type="date" ref={input => this.textInput = input} />
+                <input type="date" ref={input => this.dateInput = input} />
                 <button>Add</button>
                 <button type="button" onClick={() => this.setEditing(false)}>
                     Cancel
@@ -49,3 +50,4 @@ export default class RenewBookForm extends React.Component {
         );
     }
 }
+*/
