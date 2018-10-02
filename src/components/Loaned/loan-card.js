@@ -8,8 +8,7 @@ export default function LoanCard(props) {
 	            {props.email}
 	            {props.phone}
 	            {props.returnDate}
-	            //<button onClick={() => props.removeCard(props.id)}>Return</button>
-	            //<button onClick={() => }>Renew</button>
+	            
 	        </div>
 		);
 	};
@@ -20,3 +19,6 @@ LoanCard.defaultProps = {
     phone: '',
     returnDate: ''
 };
+
+//<button onClick={() => props.removeCard(props.id)}>Return</button>
+//<button onClick={() => }>Renew</button>
