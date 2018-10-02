@@ -2,7 +2,7 @@ import React from 'react';
 //import {connect} from 'react-redux';
 
 import LoanCard from './loan-card'
-import AddLoanForm from './add-form';
+import AddLoanForm from './loan-card-form';
 
 //import {addCard} from '../actions';
 
