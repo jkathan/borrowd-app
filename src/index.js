@@ -28,12 +28,12 @@ itemBorrow={ITEMBORROW}
 */
 
 const BORROWS = [
-  {type: 'tool', item: 'Wrench', Borrowee: 'Bob', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', Borrowee: 'john', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', Borrowee: 'bill', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', Borrowee: 'ian', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', Borrowee: 'janet', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', Borrowee: 'greta', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
+  {type: 'tool', item: 'Wrench', borrowee: 'Bob', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
+  {type: 'tool', item: 'Wrench', borrowee: 'john', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
+  {type: 'tool', item: 'Wrench', borrowee: 'bill', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
+  {type: 'tool', item: 'Wrench', borrowee: 'ian', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
+  {type: 'tool', item: 'Wrench', borrowee: 'janet', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
+  {type: 'tool', item: 'Wrench', borrowee: 'greta', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
 ];
 
 ReactDOM.render(<BorrowPage borrows={BORROWS} />, document.getElementById('root'));

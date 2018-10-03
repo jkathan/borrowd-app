@@ -16,18 +16,18 @@ class BorrowCard extends React.Component {
 	render() {
 		const type = this.props.borrow.type;
 		const item = this.props.borrow.item;
-		const Borrowee = this.props.borrow.Borrowee;
+		const borrowee = this.props.borrow.borrowee;
 		const email = this.props.borrow.email;
 		const phone = this.props.borrow.phone;
 		const returnDate = this.props.borrow.returnDate;
 		return (
 			<ul>
-			 <li>Type: {type}</li>
-			 <li>Item: {item}</li>
-			 <li>Borrowee: {Borrowee}</li>
-			 <li>Email: {email}</li>
-			 <li>Phone: {phone}</li>
-			 <li>Return Date: {returnDate}</li>
+			 <li>Type: {type} </li>
+			 <li>Item: {item} </li>
+			 <li>Borrowee: {Borrowee} </li>
+			 <li>Email: {email} </li>
+			 <li>Phone: {phone} </li>
+			 <li>Return Date: {returnDate} </li>
 			 <button>Return</button>
 			 <button>Renew</button>
 			 <RenewLoanForm />
@@ -42,9 +42,7 @@ class BorrowForm extends React.Component {
 			<div>
 					<button>From Item List</button>
 				   	<BorrowFormFromItem />
-
 					<button>New Item</button>
-
 					<AddItemBorrowForm />
 				<form>
 		           <input name="Borrowee" type="text" label="Borrowee:"/>
