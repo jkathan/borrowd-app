@@ -24,7 +24,7 @@ class BorrowCard extends React.Component {
 			<ul>
 			 <li>Type: {type} </li>
 			 <li>Item: {item} </li>
-			 <li>Borrowee: {Borrowee} </li>
+			 <li>Borrowee: {borrowee} </li>
 			 <li>Email: {email} </li>
 			 <li>Phone: {phone} </li>
 			 <li>Return Date: {returnDate} </li>
