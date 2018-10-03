@@ -4,7 +4,8 @@ class RenewLoanForm extends React.Component {
 	render() {
 		return (
 			<form>
-				<input name="returnDate" type="date" label="New Return Date:" />
+				<label>New Return Date:</label>
+				<input name="returnDate" type="date" />
 	        	<button>Submit</button>
 	        </form>
 	    );
@@ -13,12 +14,12 @@ class RenewLoanForm extends React.Component {
 
 class BorrowCard extends React.Component {
 	render() {
-		const type = this.props.type;
-		const item = this.props.item;
-		const Borrowee = this.props.Borrowee;
-		const email = this.props.email;
-		const phone = this.props.phone;
-		const returnDate = this.props.returnDate;
+		const type = this.props.borrow.type;
+		const item = this.props.borrow.item;
+		const Borrowee = this.props.borrow.Borrowee;
+		const email = this.props.borrow.email;
+		const phone = this.props.borrow.phone;
+		const returnDate = this.props.borrow.returnDate;
 		return (
 			<ul>
 			 <li>Type: {type}</li>
@@ -34,16 +35,16 @@ class BorrowCard extends React.Component {
 			 );
 	}
 }
-
+					//willbe added with state					//from Item-static
 class BorrowForm extends React.Component {
 	render() {
 		return (
 			<div>
 					<button>From Item List</button>
 				   	<BorrowFormFromItem />
-					//willbe added with state
+
 					<button>New Item</button>
-					//from Item-static
+
 					<AddItemBorrowForm />
 				<form>
 		           <input name="Borrowee" type="text" label="Borrowee:"/>
@@ -61,7 +62,6 @@ class AddItemBorrowForm extends React.Component {
 	render() {
 		return (
 			<div>	
-				<button>Add Item</button>
 				<form>
 					<label>Item Type:</label>
 					<select> 
