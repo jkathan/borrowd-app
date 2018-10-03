@@ -123,11 +123,11 @@ class SearchBar extends React.Component {
   }
 }
 
-class ItemLoanCard extends React.Component {
+class ItemBorrowCard extends React.Component {
 	render() {
-		const owner = this.props.borrowItem.owner
-		const type = this.props.borrowItem.type;
-		const item = this.props.borrowItem.item;
+		const owner = this.props.itemBorrow.owner
+		const type = this.props.itemBorrow.type;
+		const item = this.props.itemBorrow.item;
 		return (
 			<ul>
 				 <li>Owner: {owner}</li>	
@@ -145,9 +145,10 @@ class ItemLoanCard extends React.Component {
 
 class ItemCardEditBorrowForm extends React.Component {
 	render() {
+		return (
 		//value will have to be changed using props. not sure how
 			<form>
-				<input name="owner" type="text" label="Owner:" value={owner}/>
+				<input name="owner" type="text" label="Owner:" value={this.props.owner}/>
 				<select> 
 					<option>Tool</option>
 					<option>Clothing</option>
@@ -157,26 +158,10 @@ class ItemCardEditBorrowForm extends React.Component {
 				</select>
 				<input name="itemName" type="text" label="Item:" value={this.props.item}/>			
 			</form>
+			);
 		}
 	}
 
-class ItemCardEditBorrowForm extends React.Component {
-	render() {
-		//value will have to be changed using props. not sure how
-		//this is where i can add inputs in dependent on the type. on the <select>
-			<form>
-				<input name="owner" type="text" label="Owner:" value={owner}/>
-				<select> 
-					<option>Tool</option>
-					<option>Clothing</option>
-					<option>Money</option>
-					<option>Electronic</option>
-					<option>Misc.</option>
-				</select>
-				<input name="itemName" type="text" label="Item:" value={item}/>			
-			</form>
-		}
-	}
 
 class AddItemBorrowForm extends React.Component {
 	render() {
@@ -209,7 +194,7 @@ class ItemBorrowList extends React.Component {
 
 		this.props.itemBorrow.forEach((itemBorrow) => {
 			itemsBorrowList.push(
-				<ItemLoanCard borrowItem={borrowItem} />
+				<ItemBorrowCard itemBorrow={itemBorrow} />
 				);
 		});
 		return (
