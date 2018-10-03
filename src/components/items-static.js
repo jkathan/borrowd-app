@@ -30,9 +30,13 @@ class ItemCheckout extends React.Component {
 	render() {
 		return (
 			<form>
+				<label>Partner:</label>
 	        	<input name="loanee" type="text" label="Partner:"/>
+	           	<label>Email:</label>
 	           	<input name="email" type="email" label="Email address:" />
+	           	<label>Phone:</label>
 	           	<input name="phone" type="tel" label="Phone #:"/>
+	           	<label>Return Date:</label>
 	           	<input name="returnDate" type="date" label="Date of Return:" />
 	           	<button>Submit</button>
 	        </form>
@@ -46,7 +50,9 @@ class ItemCardEditForm extends React.Component {
 		
 		//value will have to be changed using props. not sure how
 			<form>
-				<select> 
+				<label>Edit Item Type:</label>
+				<select>
+					<option> -- </option> 
 					<option>Tool</option>
 					<option>Clothing</option>
 					<option>Money</option>
@@ -117,21 +123,127 @@ class SearchBar extends React.Component {
   }
 }
 
+class ItemLoanCard extends React.Component {
+	render() {
+		const owner = this.props.borrowItem.owner
+		const type = this.props.borrowItem.type;
+		const item = this.props.borrowItem.item;
+		return (
+			<ul>
+			 <li>Owner: {owner}</li>	
+			 <li>Type: {type}</li>
+			 <li>Item: {item}</li>
+			 <button>Edit</button>
+			 <ItemCardEditBorrowForm item={item}/>
+			 <button>Checkout</button>
+			 <ItemCheckout />
+			 <button>Delete</button>
+			</ul>
+			 );
+	}
+}
+
+class ItemCardEditBorrowForm extends React.Component {
+	render() {
+		//value will have to be changed using props. not sure how
+			<form>
+				<input name="owner" type="text" label="Owner:" value={owner}/>
+				<select> 
+					<option>Tool</option>
+					<option>Clothing</option>
+					<option>Money</option>
+					<option>Electronic</option>
+					<option>Misc.</option>
+				</select>
+				<input name="itemName" type="text" label="Item:" value={this.props.item}/>			
+			</form>
+		}
+	}
+
+class ItemCardEditBorrowForm extends React.Component {
+	render() {
+		//value will have to be changed using props. not sure how
+		//this is where i can add inputs in dependent on the type. on the <select>
+			<form>
+				<input name="owner" type="text" label="Owner:" value={owner}/>
+				<select> 
+					<option>Tool</option>
+					<option>Clothing</option>
+					<option>Money</option>
+					<option>Electronic</option>
+					<option>Misc.</option>
+				</select>
+				<input name="itemName" type="text" label="Item:" value={item}/>			
+			</form>
+		}
+	}
+
+class AddItemBorrowForm extends React.Component {
+	render() {
+		return (
+			<button>Add Item</button>
+			<form>
+				<label>Item Type:</label>
+				<select> 
+					<option>Tool</option>
+					<option>Clothing</option>
+					<option>Money</option>
+					<option>Electronic</option>
+					<option>Misc.</option>
+				</select>
+				<label>Item:</label>
+				<input name="itemName" type="text" label="Item:"/>
+				<label>Owner:</label>
+				<input name="owner" type="text" label="Owner:"/>			
+	           <button>Submit</button>
+	        </form>
+	        );
+	}
+}
+
+class ItemBorrowList() React.Component {
+	render() {
+		const itemsBorrowList = [];
+
+		this.props.itemBorrow.forEach((itemBorrow) => {
+			itemsBorrowList.push(
+				<ItemLoanCard borrowItem={borrowItem} />
+				);
+		});
+		return (
+			<ul>
+				<AddItemBorrowForm/>
+				<li>{itemsBorrowList}</li>
+			</ul>
+		);
+	}
+}
+
+
+
+
+
+
+
+
 export default class ItemPage extends React.Component {
   render() {
     return (
+     <div>
       <div>
+      	<h1>Your Items</h1>
         <SearchBar />
         <FilterBar />
         <ItemLoanList itemLoan={this.props.itemLoan} />
       </div>
-    );
-  }
-}
-/*
-<div>
+      <div>
+      	<h1>Past Borrowed Items</h1>
         <SearchBar />
         <FilterBar />
         <ItemBorrowList borrows={this.props.itemBorrow} />
       </div>
-      */
+     </div>
+    );
+  }
+}
+/*
