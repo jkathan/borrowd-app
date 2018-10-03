@@ -79,7 +79,7 @@ class loanList extends React.Component {
 		});
 		return (
 			<ul>
-				<LoanForm} />
+				<LoanForm />
 				<li>{loansList}</li>
 			</ul>
 		);
