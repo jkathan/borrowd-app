@@ -1,12 +1,5 @@
 import React from 'react';
 
-
-/*reactDOM.render(
-	<ItemPage itemLoan={ITEMLOAN} />,
-	  document.getElementById('root')
-	)
-*/
-
 class ItemLoanCard extends React.Component {
 	render() {
 		const type = this.props.item.type;
@@ -162,7 +155,6 @@ class ItemCardEditBorrowForm extends React.Component {
 		}
 	}
 
-
 class AddItemBorrowForm extends React.Component {
 	render() {
 		return (
@@ -206,13 +198,6 @@ class ItemBorrowList extends React.Component {
 	}
 }
 
-
-
-
-
-
-
-
 export default class ItemPage extends React.Component {
   render() {
     return (
@@ -223,14 +208,16 @@ export default class ItemPage extends React.Component {
         <FilterBar />
         <ItemLoanList itemLoan={this.props.itemLoan} />
       </div>
-      <div>
+      
+     </div>
+    );
+  }
+}
+/*
+<div>
       	<h1>Past Borrowed Items</h1>
         <SearchBar />
         <FilterBar />
         <ItemBorrowList borrows={this.props.itemBorrow} />
       </div>
-     </div>
-    );
-  }
-}
-
+*/      
