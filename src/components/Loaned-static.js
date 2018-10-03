@@ -55,6 +55,30 @@ class LoanForm extends React.Component {
 	}
 }
 
+class AddItemBorrowForm extends React.Component {
+	render() {
+		return (
+			<div>	
+				<form>
+					<label>Item Type:</label>
+					<select> 
+						<option>Tool</option>
+						<option>Clothing</option>
+						<option>Money</option>
+						<option>Electronic</option>
+						<option>Misc.</option>
+					</select>
+					<label>Item:</label>
+					<input name="itemName" type="text" label="Item:"/>
+					<label>Owner:</label>
+					<input name="owner" type="text" label="Owner:"/>			
+		           <button>Submit</button>
+		        </form>
+		    </div>
+	  	);
+	}
+}
+
 //this is where i have to autofill 
 class LoanFormFromItem extends React.Component {
 	render() {
@@ -68,7 +92,7 @@ class LoanFormFromItem extends React.Component {
 	}
 }
 
-class loanList extends React.Component {
+class LoanList extends React.Component {
 	render() {
 		const loansList = [];
 
