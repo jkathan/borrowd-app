@@ -63,12 +63,14 @@ class ItemCardEditForm extends React.Component {
 class AddItemLoanForm extends React.Component {
 	render() {
 		return (
-			<button>Add Item</button>
-			<form>
-				<input name="itemType" type="text" label="Item Type:"/>
-				<input name="itemName" type="text" label="Item:"/>			
-	           <button>Submit</button>
-	        </form>
+			<div>
+				<button>Add Item</button>
+				<form>
+					<input name="itemType" type="text" label="Item Type:"/>
+					<input name="itemName" type="text" label="Item:"/>			
+		           <button>Submit</button>
+		        </form>
+		     </div>
 	        );
 	}
 }
