@@ -1,19 +1,5 @@
 import React from 'react';
 
-reactDOM.render(
-	<LoanListPage loans={LOANS} />,
-	  document.getElementById('root')
-	)
-
-const LOANS = [
-  {type: 'tool', item: 'Wrench', loanee: 'Bob', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', loanee: 'john', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', loanee: 'bill', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', loanee: 'ian', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', loanee: 'janet', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-  {type: 'tool', item: 'Wrench', loanee: 'greta', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
-];
-
 class RenewLoanForm extends React.Component {
 	render() {
 		return (
@@ -27,12 +13,12 @@ class RenewLoanForm extends React.Component {
 
 class LoanCard extends React.Component {
 	render() {
-		const type = this.props.type;
-		const item = this.props.item;
-		const loanee = this.props.loanee;
-		const email = this.props.email;
-		const phone = this.props.phone;
-		const returnDate = this.props.returnDate;
+		const type = this.props.loan.type;
+		const item = this.props.loan.item;
+		const loanee = this.props.loan.loanee;
+		const email = this.props.loan.email;
+		const phone = this.props.loan.phone;
+		const returnDate = this.props.loan.returnDate;
 		return (
 			<ul>
 			 <li>Type: {type}</li>
@@ -101,6 +87,22 @@ class loanList() React.Component {
 	}
 }
 
+class FilterLoansBar extends React.Component {
+  render() {
+    return (
+      <form>
+      	<p>Filter by:</p>
+        <select>
+        	<option>Overdue</option>
+        	<option>Closest to Return</option>
+        	<option>Type(alphabetical)</option>
+        </select>
+        <button>Submit</button>
+      </form>
+    );
+  }
+}
+
 class SearchBar extends React.Component {
   render() {
     return (
@@ -111,7 +113,7 @@ class SearchBar extends React.Component {
   }
 }
 
-class LoanPage extends React.Component {
+export default class LoanPage extends React.Component {
   render() {
     return (
       <div>
