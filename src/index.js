@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import ItemPage from './components/items-static';
+//import ItemPage from './components/items-static';
 import BorrowPage from './components/borrowed-static';
 
 /*
@@ -36,5 +36,5 @@ const BORROWS = [
   {type: 'tool', item: 'Wrench', Borrowee: 'greta', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
 ];
 
-ReactDOM.render(<ItemPage borrows={BORROWS} />, document.getElementById('root'));
+ReactDOM.render(<BorrowPage borrows={BORROWS} />, document.getElementById('root'));
 registerServiceWorker();

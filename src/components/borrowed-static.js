@@ -37,20 +37,63 @@ class BorrowCard extends React.Component {
 class BorrowForm extends React.Component {
 	render() {
 		return (
-				//willbe added with state
-				<button>New Item</button>
-				//from Item-static
-				<AddItemBorrowForm />
-			<form>
-	           <input name="Borrowee" type="text" label="Borrowee:"/>
-	           <input name="email" type="email" label="Email address:" />
-	           <input name="phone" type="tel" label="Phone #:"/>
-	           <input name="returnDate" type="date" label="Date of Return:" />
-	           <button>Submit</button>
-	        </form>
-	        );
+			<div>
+					<button>From Item List</button>
+				   	<BorrowFormFromItem />
+					//willbe added with state
+					<button>New Item</button>
+					//from Item-static
+					<AddItemBorrowForm />
+				<form>
+		           <input name="Borrowee" type="text" label="Borrowee:"/>
+		           <input name="email" type="email" label="Email address:" />
+		           <input name="phone" type="tel" label="Phone #:"/>
+		           <input name="returnDate" type="date" label="Date of Return:" />
+		           <button>Submit</button>
+		        </form>
+		    </div>
+		);
 	}
 }
+
+class AddItemBorrowForm extends React.Component {
+	render() {
+		return (
+			<div>	
+				<button>Add Item</button>
+				<form>
+					<label>Item Type:</label>
+					<select> 
+						<option>Tool</option>
+						<option>Clothing</option>
+						<option>Money</option>
+						<option>Electronic</option>
+						<option>Misc.</option>
+					</select>
+					<label>Item:</label>
+					<input name="itemName" type="text" label="Item:"/>
+					<label>Owner:</label>
+					<input name="owner" type="text" label="Owner:"/>			
+		           <button>Submit</button>
+		        </form>
+		    </div>
+	  	);
+	}
+}
+
+
+class BorrowFormFromItem extends React.Component {
+	render() {
+		return (
+			<form>
+			   <select>
+			   		<option></option>
+			   </select>
+			</form>
+			)
+	}
+}
+
 
 class BorrowList extends React.Component {
 	render() {
@@ -85,7 +128,7 @@ class FilterLoansBar extends React.Component {
     );
   }
 }
-/*Not Need but maybe needed
+//Not Need but maybe needed
 class SearchBar extends React.Component {
   render() {
     return (
@@ -95,8 +138,8 @@ class SearchBar extends React.Component {
     );
   }
 }
-*/
-class BorrowPage extends React.Component {
+
+export default class BorrowPage extends React.Component {
   render() {
     return (
       <div>
