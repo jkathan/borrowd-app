@@ -203,7 +203,7 @@ class AddItemBorrowForm extends React.Component {
 	}
 }
 
-class ItemBorrowList() React.Component {
+class ItemBorrowList extends React.Component {
 	render() {
 		const itemsBorrowList = [];
 
