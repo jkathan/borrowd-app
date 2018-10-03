@@ -22,7 +22,8 @@ const ITEMBORROW = [
   {type: 'tool', item: 'Wrench', owner: "Joey"},
   {type: 'tool', item: 'Wrench', owner: "Joey"},
 ];
+itemBorrow={ITEMBORROW}
 */
 
-ReactDOM.render(<ItemPage itemLoan={ITEMLOAN} itemBorrow={ITEMBORROW} />, document.getElementById('root'));
+ReactDOM.render(<ItemPage itemLoan={ITEMLOAN}  />, document.getElementById('root'));
 registerServiceWorker();
