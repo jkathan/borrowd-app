@@ -5,5 +5,14 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import ItemPage from './components/items-static'
 
+const ITEMLOAN = [
+  {type: 'tool', item: 'Wrench'},
+  {type: 'tool', item: 'Wrench'},
+  {type: 'tool', item: 'Wrench'},
+  {type: 'tool', item: 'Wrench'},
+  {type: 'tool', item: 'Wrench'},
+  {type: 'tool', item: 'Wrench'},
+];
+
 ReactDOM.render(<ItemPage itemLoan={ITEMLOAN} />, document.getElementById('root'));
 registerServiceWorker();
