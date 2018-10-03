@@ -7,7 +7,7 @@ import React from 'react';
 	)
 */
 
-export default class ItemLoanCard extends React.Component {
+class ItemLoanCard extends React.Component {
 	render() {
 		const type = this.props.item.type;
 		const item = this.props.item.item;
@@ -26,7 +26,7 @@ export default class ItemLoanCard extends React.Component {
 }
 
 //if own component in loan, not necessary here
-export default class ItemCheckout extends React.Component {
+class ItemCheckout extends React.Component {
 	render() {
 		return (
 			<form>
@@ -40,7 +40,7 @@ export default class ItemCheckout extends React.Component {
 	}
 }
 
-export default class ItemCardEditForm extends React.Component {
+class ItemCardEditForm extends React.Component {
 	render() {
 		return (
 		
@@ -59,7 +59,7 @@ export default class ItemCardEditForm extends React.Component {
 		}
 	}
 
-export default class AddItemLoanForm extends React.Component {
+class AddItemLoanForm extends React.Component {
 	render() {
 		return (
 			<div>
@@ -74,7 +74,7 @@ export default class AddItemLoanForm extends React.Component {
 	}
 }
 
-export default class ItemLoanList extends React.Component {
+class ItemLoanList extends React.Component {
 	render() {
 		const itemsLoanList = [];
 
@@ -92,7 +92,7 @@ export default class ItemLoanList extends React.Component {
 	}
 }
 
-export default class FilterBar extends React.Component {
+class FilterBar extends React.Component {
   render() {
     return (
       <form>
@@ -107,7 +107,7 @@ export default class FilterBar extends React.Component {
   }
 }
 
-export default class SearchBar extends React.Component {
+class SearchBar extends React.Component {
   render() {
     return (
       <form>
