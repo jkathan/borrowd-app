@@ -6,17 +6,8 @@ import React from 'react';
 	  document.getElementById('root')
 	)
 */
-const ITEMLOAN = [
-  {type: 'tool', item: 'Wrench'},
-  {type: 'tool', item: 'Wrench'},
-  {type: 'tool', item: 'Wrench'},
-  {type: 'tool', item: 'Wrench'},
-  {type: 'tool', item: 'Wrench'},
-  {type: 'tool', item: 'Wrench'},
-];
 
-
-class ItemLoanCard extends React.Component {
+export default class ItemLoanCard extends React.Component {
 	render() {
 		const type = this.props.item.type;
 		const item = this.props.item.item;
@@ -35,7 +26,7 @@ class ItemLoanCard extends React.Component {
 }
 
 //if own component in loan, not necessary here
-class ItemCheckout extends React.Component {
+export default class ItemCheckout extends React.Component {
 	render() {
 		return (
 			<form>
@@ -49,7 +40,7 @@ class ItemCheckout extends React.Component {
 	}
 }
 
-class ItemCardEditForm extends React.Component {
+export default class ItemCardEditForm extends React.Component {
 	render() {
 		return (
 		
@@ -68,7 +59,7 @@ class ItemCardEditForm extends React.Component {
 		}
 	}
 
-class AddItemLoanForm extends React.Component {
+export default class AddItemLoanForm extends React.Component {
 	render() {
 		return (
 			<div>
@@ -83,7 +74,7 @@ class AddItemLoanForm extends React.Component {
 	}
 }
 
-class ItemLoanList extends React.Component {
+export default class ItemLoanList extends React.Component {
 	render() {
 		const itemsLoanList = [];
 
@@ -101,7 +92,7 @@ class ItemLoanList extends React.Component {
 	}
 }
 
-class FilterBar extends React.Component {
+export default class FilterBar extends React.Component {
   render() {
     return (
       <form>
@@ -116,7 +107,7 @@ class FilterBar extends React.Component {
   }
 }
 
-class SearchBar extends React.Component {
+export default class SearchBar extends React.Component {
   render() {
     return (
       <form>
@@ -126,7 +117,7 @@ class SearchBar extends React.Component {
   }
 }
 
-class ItemPage extends React.Component {
+export default class ItemPage extends React.Component {
   render() {
     return (
       <div>
