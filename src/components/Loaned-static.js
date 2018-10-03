@@ -38,13 +38,11 @@ class LoanCard extends React.Component {
 class LoanForm extends React.Component {
 	render() {
 		return (
-				//willbe added with state
+			<div>
 			   	<button>From Item List</button>
 			   	<LoanFormFromItem />
 				<button>New Item</button>
-				//from Item-static
 				<AddItemLoanForm />
-				//should this be its own component?
 			<form>
 	        	<input name="loanee" type="text" label="Loanee:"/>
 	           	<input name="email" type="email" label="Email address:" />
@@ -52,6 +50,7 @@ class LoanForm extends React.Component {
 	           	<input name="returnDate" type="date" label="Date of Return:" />
 	           	<button>Submit</button>
 	        </form>
+	        </div>
 	        );
 	}
 }
