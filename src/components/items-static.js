@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 /*reactDOM.render(
 	<ItemPage itemLoan={ITEMLOAN} />,
 	  document.getElementById('root')
@@ -34,6 +37,7 @@ class ItemLoanCard extends React.Component {
 //if own component in loan, not necessary here
 class ItemCheckout extends React.Component {
 	render() {
+		return (
 			<form>
 	        	<input name="loanee" type="text" label="Partner:"/>
 	           	<input name="email" type="email" label="Email address:" />
@@ -41,11 +45,14 @@ class ItemCheckout extends React.Component {
 	           	<input name="returnDate" type="date" label="Date of Return:" />
 	           	<button>Submit</button>
 	        </form>
+	        );
 	}
 }
 
 class ItemCardEditForm extends React.Component {
 	render() {
+		return (
+		
 		//value will have to be changed using props. not sure how
 			<form>
 				<select> 
@@ -57,6 +64,7 @@ class ItemCardEditForm extends React.Component {
 				</select>
 				<input name="itemName" type="text" label="Item:" value={item}/>			
 			</form>
+			);
 		}
 	}
 
