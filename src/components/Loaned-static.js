@@ -1,3 +1,5 @@
+import React from 'react';
+
 reactDOM.render(
 	<LoanListPage loans={LOANS} />,
 	  document.getElementById('root')

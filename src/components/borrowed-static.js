@@ -1,3 +1,4 @@
+import React from 'react';
 
 class RenewLoanForm extends React.Component {
 	render() {
