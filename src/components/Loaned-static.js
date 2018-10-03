@@ -68,7 +68,7 @@ class LoanFormFromItem extends React.Component {
 	}
 }
 
-class loanList() React.Component {
+class loanList extends React.Component {
 	render() {
 		const loansList = [];
 
