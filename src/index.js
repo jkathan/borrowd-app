@@ -5,7 +5,7 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 //import ItemPage from './components/items-static';
 import BorrowPage from './components/borrowed-static';
-import LoanPage from './components/loaned-static';
+import LoanPage from './components/Loaned-static';
 
 
 /*
