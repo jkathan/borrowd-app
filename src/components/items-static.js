@@ -199,7 +199,7 @@ class ItemBorrowList extends React.Component {
 		});
 		return (
 			<ul>
-				<AddItemBorrowForm/>
+				<AddItemBorrowForm />
 				<li>{itemsBorrowList}</li>
 			</ul>
 		);
