@@ -121,6 +121,7 @@ class SearchBar extends React.Component {
 class ItemPage extends React.Component {
   render() {
     return (
+    <div>	
       <div>
         <SearchBar />
         <FilterBar />
@@ -131,6 +132,7 @@ class ItemPage extends React.Component {
         <FilterBar />
         <ItemBorrowList borrows={this.props.itemBorrow} />
       </div>
+    </div>
     );
   }
 }
