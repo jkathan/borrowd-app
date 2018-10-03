@@ -75,7 +75,7 @@ class AddItemLoanForm extends React.Component {
 	}
 }
 
-class ItemLoanList() React.Component {
+class ItemLoanList extends React.Component {
 	render() {
 		const itemsLoanList = [];
 
