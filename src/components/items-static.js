@@ -130,14 +130,14 @@ class ItemLoanCard extends React.Component {
 		const item = this.props.borrowItem.item;
 		return (
 			<ul>
-			 <li>Owner: {owner}</li>	
-			 <li>Type: {type}</li>
-			 <li>Item: {item}</li>
-			 <button>Edit</button>
-			 <ItemCardEditBorrowForm item={item}/>
-			 <button>Checkout</button>
-			 <ItemCheckout />
-			 <button>Delete</button>
+				 <li>Owner: {owner}</li>	
+				 <li>Type: {type}</li>
+				 <li>Item: {item}</li>
+				 <button>Edit</button>
+				 <ItemCardEditBorrowForm item={item}/>
+				 <button>Checkout</button>
+				 <ItemCheckout />
+				 <button>Delete</button>
 			</ul>
 			 );
 	}
@@ -181,6 +181,7 @@ class ItemCardEditBorrowForm extends React.Component {
 class AddItemBorrowForm extends React.Component {
 	render() {
 		return (
+		<div>	
 			<button>Add Item</button>
 			<form>
 				<label>Item Type:</label>
@@ -197,6 +198,7 @@ class AddItemBorrowForm extends React.Component {
 				<input name="owner" type="text" label="Owner:"/>			
 	           <button>Submit</button>
 	        </form>
+	    </div>
 	        );
 	}
 }
