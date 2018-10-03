@@ -52,7 +52,8 @@ class ItemCardEditForm extends React.Component {
 					<option>Electronic</option>
 					<option>Misc.</option>
 				</select>
-				<input name="itemName" type="text" label="Item:" value={this.props.item}/>			
+				<input name="itemName" type="text" label="Item:" value={this.props.item}/>
+				<button>Submit</button>			
 			</form>
 			);
 		}

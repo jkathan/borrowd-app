@@ -1,4 +1,4 @@
-/*reactDOM.render(
+reactDOM.render(
 	<LoanListPage loans={LOANS} />,
 	  document.getElementById('root')
 	)
@@ -55,7 +55,7 @@ class LoanForm extends React.Component {
 			   	<LoanFormFromItem />
 				<button>New Item</button>
 				//from Item-static
-				<AddItemForm />
+				<AddItemLoanForm />
 				//should this be its own component?
 			<form>
 	        	<input name="loanee" type="text" label="Loanee:"/>
@@ -68,7 +68,7 @@ class LoanForm extends React.Component {
 	}
 }
 
-
+//this is where i have to autofill 
 class LoanFormFromItem extends React.Component {
 	render() {
 		return (
@@ -92,27 +92,11 @@ class loanList() React.Component {
 		});
 		return (
 			<ul>
-				<li>{LoanForm}</li>
+				<LoanForm} />
 				<li>{loansList}</li>
 			</ul>
 		);
 	}
-}
-
-class FilterBar extends React.Component {
-  render() {
-    return (
-      <form>
-      	<p>Filter by:</p>
-        <select>
-        	<option>Overdue</option>
-        	<option>Closest to Return</option>
-        	<option>Type(alphabetical)</option>
-        </select>
-        <button>Submit</button>
-      </form>
-    );
-  }
 }
 
 class SearchBar extends React.Component {
@@ -130,10 +114,10 @@ class LoanPage extends React.Component {
     return (
       <div>
       	<SearchBar />
-        <FilterBar />
+        <FilterLoansBar />
         <LoanList loans={this.props.loans} />
       </div>
     );
   }
 }
-*/
+

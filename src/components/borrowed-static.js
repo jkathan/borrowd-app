@@ -1,9 +1,9 @@
-/*reactDOM.render(
-	<LoanListPage borrows={BORROWS} />,
+reactDOM.render(
+	<BorrowPage borrows={BORROWS} />,
 	  document.getElementById('root')
 	)
 
-const BORROWS = 
+const BORROWS = [
   {type: 'tool', item: 'Wrench', Borrowee: 'Bob', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
   {type: 'tool', item: 'Wrench', Borrowee: 'john', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
   {type: 'tool', item: 'Wrench', Borrowee: 'bill', email: 'fake@email.com', phone: '301-555-555', returnDate: '12/8/19'},
@@ -53,7 +53,7 @@ class BorrowForm extends React.Component {
 				//willbe added with state
 				<button>New Item</button>
 				//from Item-static
-				<AddItemForm />
+				<AddItemBorrowForm />
 			<form>
 	           <input name="Borrowee" type="text" label="Borrowee:"/>
 	           <input name="email" type="email" label="Email address:" />
@@ -65,7 +65,7 @@ class BorrowForm extends React.Component {
 	}
 }
 
-class BorrowList() React.Component {
+class BorrowList extends React.Component {
 	render() {
 		const borrowsList = [];
 
@@ -82,8 +82,8 @@ class BorrowList() React.Component {
 		);
 	}
 }
-
-class FilterBar extends React.Component {
+//may need to be more specific
+class FilterLoansBar extends React.Component {
   render() {
     return (
       <form>
@@ -98,7 +98,7 @@ class FilterBar extends React.Component {
     );
   }
 }
-
+/*Not Need but maybe needed
 class SearchBar extends React.Component {
   render() {
     return (
@@ -108,16 +108,15 @@ class SearchBar extends React.Component {
     );
   }
 }
-
+*/
 class BorrowPage extends React.Component {
   render() {
     return (
       <div>
       	<SearchBar />
-        <FilterBar />
+        <FilterLoansBar />
         <BorrowList borrows={this.props.borrows} />
       </div>
     );
   }
 }
-*/
