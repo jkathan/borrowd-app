@@ -55,7 +55,7 @@ class LoanForm extends React.Component {
 	}
 }
 
-class AddItemBorrowForm extends React.Component {
+class AddItemLoanForm extends React.Component {
 	render() {
 		return (
 			<div>	
@@ -69,9 +69,7 @@ class AddItemBorrowForm extends React.Component {
 						<option>Misc.</option>
 					</select>
 					<label>Item:</label>
-					<input name="itemName" type="text" label="Item:"/>
-					<label>Owner:</label>
-					<input name="owner" type="text" label="Owner:"/>			
+					<input name="itemName" type="text" label="Item:"/>		
 		           <button>Submit</button>
 		        </form>
 		    </div>
