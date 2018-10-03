@@ -25,7 +25,7 @@ class ItemLoanCard extends React.Component {
 			 <li>Type: {type}</li>
 			 <li>Item: {item}</li>
 			 <button>Edit</button>
-			 <ItemCardEditForm />
+			 <ItemCardEditForm item={item}/>
 			 <button>Checkout</button>
 			 <ItemCheckout />
 			 <button>Delete</button>
@@ -62,7 +62,7 @@ class ItemCardEditForm extends React.Component {
 					<option>Electronic</option>
 					<option>Misc.</option>
 				</select>
-				<input name="itemName" type="text" label="Item:" value={item}/>			
+				<input name="itemName" type="text" label="Item:" value={this.props.item}/>			
 			</form>
 			);
 		}
@@ -95,7 +95,7 @@ class ItemLoanList extends React.Component {
 		return (
 			<ul>
 				<AddItemLoanForm />
-				<li>{itemsList}</li>
+				<li>{itemsLoanList}</li>
 			</ul>
 		);
 	}
@@ -129,18 +129,18 @@ class SearchBar extends React.Component {
 class ItemPage extends React.Component {
   render() {
     return (
-    <div>	
       <div>
         <SearchBar />
         <FilterBar />
         <ItemLoanList itemLoan={this.props.itemLoan} />
       </div>
-      <div>
+    );
+  }
+}
+/*
+<div>
         <SearchBar />
         <FilterBar />
         <ItemBorrowList borrows={this.props.itemBorrow} />
       </div>
-    </div>
-    );
-  }
-}
+      */
