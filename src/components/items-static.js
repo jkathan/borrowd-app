@@ -166,25 +166,25 @@ class ItemCardEditBorrowForm extends React.Component {
 class AddItemBorrowForm extends React.Component {
 	render() {
 		return (
-		<div>	
-			<button>Add Item</button>
-			<form>
-				<label>Item Type:</label>
-				<select> 
-					<option>Tool</option>
-					<option>Clothing</option>
-					<option>Money</option>
-					<option>Electronic</option>
-					<option>Misc.</option>
-				</select>
-				<label>Item:</label>
-				<input name="itemName" type="text" label="Item:"/>
-				<label>Owner:</label>
-				<input name="owner" type="text" label="Owner:"/>			
-	           <button>Submit</button>
-	        </form>
-	    </div>
-	        );
+			<div>	
+				<button>Add Item</button>
+				<form>
+					<label>Item Type:</label>
+					<select> 
+						<option>Tool</option>
+						<option>Clothing</option>
+						<option>Money</option>
+						<option>Electronic</option>
+						<option>Misc.</option>
+					</select>
+					<label>Item:</label>
+					<input name="itemName" type="text" label="Item:"/>
+					<label>Owner:</label>
+					<input name="owner" type="text" label="Owner:"/>			
+		           <button>Submit</button>
+		        </form>
+		    </div>
+	  	);
 	}
 }
 
